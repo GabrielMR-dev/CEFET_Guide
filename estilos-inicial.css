@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0b0f19;
+    color: #f8fafc;
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.principal {
+    width: 100%;
+    max-width: 1000px;
+    padding: 2rem;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    letter-spacing: -1px;
+    margin-bottom: 0.5rem;
+}
+
+.header p {
+    color: #94a3b8; /* Texto secundário (Cinza) */
+    font-size: 1.1rem;
+    font-weight: 300;
+    margin-bottom: 3.5rem;
+}
+
+.selecao {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.campus {
+    background-color: #1e293b; /* Fundo dos cards */
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    padding: 3rem 2rem;
+    text-decoration: none;
+    color: #f8fafc;
+    transition: all 0.3s ease; /* Tempo de transição direto */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.campus:hover {
+    transform: translateY(-5px);
+    border-color: #006a98; /* Borda azul no hover */
+    box-shadow: 0 10px 30px rgba(56, 189, 248, 0.1); /* Sombra suave azul */
+}
+
+.campus h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.campus p {
+    color: #94a3b8;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    font-weight: 300;
+}
+
+.Ir {
+    font-size: 0.9rem;
+    color: #38bdf8;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: transform 0.3s ease;
+}
+
+.campus-card:hover .Ir {
+    display: inline-block;
+    transform: translateX(5px);
+}
