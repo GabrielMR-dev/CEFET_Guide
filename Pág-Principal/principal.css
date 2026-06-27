@@ -14,14 +14,14 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #0d0d34;     /* Cor escura combinando com seu fundo */
+    background-color: #0d0d34;
     border-bottom: 0.15vw solid #3032a1;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1vh 4vw;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-    z-index: 9999;                 /* Força o menu a ficar na frente de tudo */
+    z-index: 9;
     box-sizing: border-box;
 }
 
@@ -31,6 +31,7 @@ body {
     font-weight: bold;
     font-size: 1.8vw;
     text-decoration: none;
+    transition: all ease-in-out 0.2s;
 }
 
 .menu-links {
@@ -43,7 +44,7 @@ body {
 
 .menu-links a {
     text-decoration: none;
-    color: #aac6ff;                /* Azul claro combinando com seus cards */
+    color: #aac6ff;
     font-family: 'Gill Sans', sans-serif;
     font-size: 1.2vw;
     font-weight: bold;
@@ -51,7 +52,10 @@ body {
 }
 
 .menu-links a:hover {
-    color: white;                  /* Destaca ao passar o mouse */
+    color: white;
+}
+.menu-logo a:hover {
+    color: #5a96ff;
 }
 
 .container {
