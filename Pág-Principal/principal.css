@@ -247,23 +247,46 @@ video {
 }
 
 .imgsDaora {
-    display: grid;
+    display: flex;
     justify-content: center;
-    gap: 3vw;
-    grid-template-columns: repeat(2, 0.5fr);
+    gap: 5vw;
+    margin: 10vh auto 5vh;
     margin-bottom: 17vh;
     padding-bottom: 17vh;
     border-bottom: #0d0d34 solid 0.25vw;
     border-radius: 1%;
+    max-width: 75vw;
 }
-.imgsDaora #img-1 {
-    margin-top: 10vh;
-    width: 18vw;
+
+.bloco-campus {
+    width: 32vw;
 }
-.imgsDaora #img-2 {
-    margin-top: 10vh;
-    width: 42vw;
-    height: 53vh;
+.bloco-campus a {
+    text-decoration: none;
+    color: #0d0d34;
+    font-family: 'Gill Sans', sans-serif;
+    font-size: 1.3vw;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto; 
+    transition: transform ease-in-out 0.2s;
+}
+.bloco-campus img {
+    width: 100%;
+    height: 40vh;
+    display: block;
+    object-fit: fill;
+    padding: 0.3vw;
+    border: #1d1c6c 2px solid;
+    box-shadow: 0 4px 15px rgba(11, 1, 89, 0.768);
+    box-sizing: border-box;
+    margin-bottom: 15px;
+}
+.bloco-campus a:hover {
+    transform: scale(1.03);
+    color: #1b3f87;
 }
 
 .funcoes h2{
