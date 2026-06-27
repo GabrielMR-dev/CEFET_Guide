@@ -1,52 +1,86 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #87a6af;
+    background-image: linear-gradient(#0d0d34, #375b9a);
     margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    padding: 8vh;
+}
+
+.menu-fixo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #0d0d34;     /* Cor escura combinando com seu fundo */
+    border-bottom: 0.15vw solid #3032a1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1vh 4vw;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    z-index: 9999;                 /* Força o menu a ficar na frente de tudo */
+    box-sizing: border-box;
+}
+
+.menu-logo a {
+    color: white;
+    font-family: Georgia, serif;
+    font-weight: bold;
+    font-size: 1.8vw;
+    text-decoration: none;
+}
+
+.menu-links {
+    display: flex;
+    gap: 2vw;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-links a {
+    text-decoration: none;
+    color: #aac6ff;                /* Azul claro combinando com seus cards */
+    font-family: 'Gill Sans', sans-serif;
+    font-size: 1.2vw;
+    font-weight: bold;
+    transition: color ease-in-out 0.2s;
+}
+
+.menu-links a:hover {
+    color: white;                  /* Destaca ao passar o mouse */
 }
 
 .container {
-    height: 500vh;
-    background-image: linear-gradient(#eff8ff, #0050d8);
+    height: 100%;
+    background-image: linear-gradient(#1d1c6c, #5a96ff);
     padding: 40px;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    border: solid 0.2vw rgb(0, 0, 103);
+    border-radius: 1vw;
+    box-shadow: 0 4px 20px rgba(0, 30, 255, 1);
     max-width: 75vw;
     text-align: center;
 }
 
-h1 {
-    background-image: linear-gradient(to right, black, blue);
-    background-clip: text;
-    color: transparent;
-    font-size: 5vw;
-    font-family: 'Times New Roman', Times, serif;
-}
-
-h2 {
-    background-image: linear-gradient(to right, black, blue);
-    background-clip: text;
-    color: transparent;
-    font-size: 3.5vw;
-    font-family: 'Times New Roman', Times, serif;
-}
-
 .Inicio h1 {
-    margin-bottom: 15px;
+    color: white;
+    font-size: 5vw;
+    margin-bottom: 2vh;
     margin: 0 12.5vw 3vw;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
 }
 .Inicio img {
-    border: solid 1px black;
+    border: solid 2px black;
     padding: 5px;
     max-width: 15vw;
+    box-shadow: 0 4px 20px rgba(0, 30, 255, 1);
     margin-bottom: 20px;
 }
 .Inicio p {
-    color: #262626;
+    color: rgb(51, 130, 204);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     line-height: 1.6;
     font-size: 1.5vw;
@@ -57,6 +91,11 @@ h2 {
     margin-bottom: 25vh;
 }
 .comoTudoComecou h2 {
+    background-image: linear-gradient(to right, rgb(0, 0, 0), rgb(25, 0, 84));
+    background-clip: text;
+    color: transparent;
+    font-size: 3.5vw;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     text-align: start;
     padding-left: 2.5vw;
 }
@@ -77,6 +116,11 @@ h2 {
     margin-bottom: 30vh;
 }
 .hojeEmDia h2 {
+    background-image: linear-gradient(to right, blue, black);
+    background-clip: text;
+    color: transparent;
+    font-size: 3.5vw;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     text-align: end;
     padding-right: 2.5vw;
 }
@@ -94,9 +138,17 @@ h2 {
 }
 
 .aEntrada {
-    margin-bottom: 30vh;
+    margin-bottom: 17vh;
+    padding-bottom: 17vh;
+    border-bottom: #0d0d34 solid 0.25vw;
+    border-radius: 1%;
 }
 .aEntrada h2 {
+    background-image: linear-gradient(to right, black, blue);
+    background-clip: text;
+    color: transparent;
+    font-size: 3.5vw;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     text-align: start;
     padding-left: 2.5vw;
 }
@@ -113,6 +165,128 @@ h2 {
     padding: 0 5vw 0 3vw;
 }
 
-.pontosImportantes {
-    margin-bottom: 30vh;
+video {
+    width: 50vw;
+    height: 75vh;
+    margin-bottom: 17vh;
+    padding: 0 10vw 17vh 10vw;
+    border-bottom: #0d0d34 solid 0.25vw;
+    border-radius: 1%;
+}
+
+.pontosImportantes h1 {
+    margin-bottom: 10vh;
+    font-size: 4.3vw;
+}
+
+.conteinerDasCards {
+    margin: 0 2.5vw 0 3.5vw;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5vw;
+    margin-bottom: 17vh;
+    padding-bottom: 17vh;
+    border-bottom: #0d0d34 solid 0.25vw;
+    border-radius: 1%;
+}
+
+.Card {
+    background-color: rgb(170, 198, 255);
+    width: 20vw;
+    border: 0.2vw solid #3032a1;
+    border-radius: 5%;
+    box-shadow: 0 4px 20px rgb(0, 16, 135);
+    transition: all ease-in-out 0.2s;
+}
+.Card:hover {
+    transform: scale(1.1);
+}
+.Card img {
+    width: 19vw;
+    padding: 1vh 0 1vh 0;
+    border-radius: 7%;
+}
+.Card a {
+    text-decoration: none;
+    color: #0d0d34;
+    transition: all ease-in-out 0.4s;
+}
+.Card h2, h3, h4 {
+    text-align: start;
+    padding-left: 1vw;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.Diretoria h2 {
+    background-image: linear-gradient(to right, black, blue);
+    background-clip: text;
+    color: transparent;
+    font-size: 5vw;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: start;
+    padding-left: 2.5vw;
+}
+.Diretoria img {
+    float: right;
+    border: double 0.35vw rgb(21, 0, 75);
+    padding: 0.5vw;
+    width: 25vw;
+    margin-right: 2.5vw;
+}
+.Diretoria p {
+    display: flex;
+    text-align: start;
+    padding: 0 5vw 0 3vw;
+}
+.Diretoria #diretora {
+    margin: 0 0 0 54vw;
+}
+
+.imgsDaora {
+    display: grid;
+    justify-content: center;
+    gap: 3vw;
+    grid-template-columns: repeat(2, 0.5fr);
+    margin-bottom: 17vh;
+    padding-bottom: 17vh;
+    border-bottom: #0d0d34 solid 0.25vw;
+    border-radius: 1%;
+}
+.imgsDaora #img-1 {
+    margin-top: 10vh;
+    width: 18vw;
+}
+.imgsDaora #img-2 {
+    margin-top: 10vh;
+    width: 42vw;
+    height: 53vh;
+}
+
+.funcoes h2{
+    background-image: linear-gradient(to right, black, blue);
+    background-clip: text;
+    color: transparent;
+    font-size: 4vw;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.conteinerDasCards-funcoes {
+    margin: 0 15vw 0 20vw;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    row-gap: 1vw;
+    cursor: default;
+}
+.conteinerDasCards-funcoes a {
+    text-decoration: none;
+}
+.Card-funcao {
+    background-color: rgb(93, 137, 225);
+    width: 10vw;
+    border: 0.2vw solid #3032a1;
+    border-radius: 5%;
+    transition: ease-in-out all 0.3s;
+}
+.Card-funcao:hover {
+    transform: scale(1.2);
 }
