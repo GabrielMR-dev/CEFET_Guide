@@ -1,0 +1,67 @@
+/* Customização do body apenas para a página de créditos */
+.body-creditos {
+    background: #000000 !important; /* Força o fundo a ficar totalmente preto como no cinema */
+    overflow: hidden;                /* Esconde as barras de rolagem normais do navegador */
+}
+
+.janela-cinema {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.creditos {
+    position: absolute;
+    top: 100%;
+    text-align: center;
+    font-family: 'Gill Sans', sans-serif;
+    color: #ffffff;
+    
+    animation: rolar-creditos 30s linear infinite; 
+}
+
+.creditos h1 {
+    font-size: 1.8vw;
+    color: #aac6ff;
+    margin-top: 6vh;
+    margin-bottom: 1vh;
+    letter-spacing: 0.2vw;
+}
+
+.creditos p {
+    font-size: 1.4vw;
+    margin: 0.5vh 0;
+    color: #e5e7eb;
+}
+
+.tituloCredito {
+    font-family: Georgia, serif !important;
+    font-size: 4vw !important;
+    font-weight: bold;
+    color: #ffffff !important;
+}
+
+.subtituloCredito {
+    font-size: 1.6vw !important;
+    color: #5a96ff !important;
+}
+
+.fim {
+    font-size: 3vw !important;
+    margin-top: 10vh !important;
+    font-weight: bold;
+}
+
+
+@keyframes rolar-creditos {
+    0% {
+        top: 100%;
+        transform: translateY(0);
+    }
+    100% {
+        top: 0%;
+        transform: translateY(-120%);
+    }
+}

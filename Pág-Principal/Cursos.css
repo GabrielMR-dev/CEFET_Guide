@@ -1,0 +1,95 @@
+.Inicio-Cursos h1, p {
+    background-image: linear-gradient(to right, rgb(0, 0, 0), rgb(25, 0, 84));
+    background-clip: text;
+    color: transparent;
+}
+.grid-cursos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Mantém 3 colunas impecáveis */
+    gap: 2vw;
+    margin-top: 4vh;
+}
+
+/* O card assume todo o papel do Flexbox e de container */
+.card-curso {
+    background-color: rgb(170, 198, 255); /* Azul claro do seu padrão */
+    border: 0.2vw solid #3032a1;
+    border-radius: 1vw;
+    padding: 1.5vw;
+    height: 320px;               /* Altura simétrica para alinhar a grade */
+    box-shadow: 0 4px 15px rgba(0, 16, 135, 0.4);
+    box-sizing: border-box;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;          /* Importante para travar a camada preta interna */
+    overflow: hidden;            /* Corta os cantos da camada nos cantos arredondados */
+    transition: transform ease-in-out 0.2s;
+}
+
+/* Cor diferenciada para destacar as Graduações */
+.card-curso.superior {
+    background-color: #d1e0ff;
+}
+
+/* Efeito de zoom do card no hover */
+.card-curso:hover {
+    transform: scale(1.03);
+}
+
+/* Imagens */
+.card-curso img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 0.5vw;
+    margin-bottom: 15px;
+    transition: filter 0.3s ease;
+}
+
+/* Títulos visíveis na frente */
+.card-curso h3 {
+    margin: 0;
+    color: #0d0d34;
+    font-family: 'Gill Sans', sans-serif;
+    font-size: 1.6vw;
+    font-weight: bold;
+}
+
+/* CAMADA ESCURA INTERNA (ESCONDIDA POR PADRÃO) */
+.info-escondida {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(13, 13, 52, 0.95); /* Azul escuro igual ao seu fundo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2vw;
+    box-sizing: border-box;
+    opacity: 0;                  /* Invisível inicialmente */
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Texto descritivo que surge */
+.info-escondida p {
+    color: #aac6ff;              /* Azul claro com ótimo contraste */
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 1.2vw;
+    line-height: 1.6;
+    margin: 0;
+    text-align: center;
+}
+
+/* INTERAÇÕES NO CARD AO PASSAR O MOUSE */
+.card-curso:hover .info-escondida {
+    opacity: 1;                  /* Exibe a descrição do curso */
+}
+
+.card-curso:hover img {
+    filter: blur(2px);            /* Borra levemente a imagem ao fundo */
+}
