@@ -91,6 +91,34 @@ body {
     transform: rotate(0deg);
 }
 
+@media (max-width: 1200px) {
+    #titulo-inicio {
+        font-size: 14px;
+        letter-spacing: 3px;
+        margin-top: 10vw;
+    }
+    #maior-inicio {
+        font-size: 78px;
+    }
+    #medio-inicio {
+        font-size: 13px;
+        width: 400px;
+        letter-spacing: 2px;
+    }
+    #botao-de-comeco {
+        margin-left: 40vw;
+        width: 160px;
+        background-size: 160px;
+        padding: 60px;
+    }
+    #botao-de-comeco:hover {
+        width: 180px;
+        background-size: 180px;
+        padding: 70px 80px;
+        margin-left: 40vw;
+    }
+}
+
 @media (max-width: 768px) {
     #titulo-inicio {
         font-size: 0.65rem;
@@ -113,5 +141,35 @@ body {
         margin-top: 4rem;
         background-size: 10rem;
         transform: rotate(0deg);
+    }
+}
+
+@media (max-width: 480px) {
+    #titulo-inicio {
+        font-size: 0.55rem;
+        margin-top: 4rem;
+        letter-spacing: 2px;
+    }
+    #maior-inicio {
+        font-size: 2.2rem;
+        margin-top: 1.5rem;
+        line-height: 1.1;
+    }
+    #medio-inicio {
+        font-size: 0.65rem;
+        width: 85%;
+        margin-top: 1rem;
+        letter-spacing: 2px;
+    }
+    #botao-de-comeco {
+        width: 9rem;
+        padding: 3rem;
+        margin-top: 3rem;
+        background-size: 8rem;
+    }
+    #botao-de-comeco:hover {
+        width: 9rem;
+        padding: 3rem;
+        background-size: 8rem;
     }
 }
