@@ -93,3 +93,50 @@
 .card-curso:hover img {
     filter: blur(2px);            /* Borra levemente a imagem ao fundo */
 }
+
+@media (max-width: 1200px) {
+    .card-curso h3 {
+        font-size: 18px;
+    }
+    .info-escondida p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .grid-cursos {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    .card-curso {
+        height: auto;
+        min-height: 320px;
+        border-radius: 8px;
+        padding: 20px;
+    }
+    .card-curso img {
+        height: 160px;
+        border-radius: 6px;
+    }
+}
+
+@media (max-width: 480px) {
+    .grid-cursos {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    .card-curso {
+        min-height: 280px;
+        padding: 15px;
+    }
+    .card-curso img {
+        height: 140px;
+    }
+    .card-curso h3 {
+        font-size: 16px;
+    }
+    .info-escondida p {
+        font-size: 13px;
+        line-height: 1.4;
+    }
+}
