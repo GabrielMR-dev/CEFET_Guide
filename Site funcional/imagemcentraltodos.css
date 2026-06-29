@@ -89,3 +89,50 @@ body{
     margin: 45vh auto 0 auto;
     padding: 0 20px;   
 }
+
+@media (max-width: 1200px) {
+  #textoc {
+    font-size: 22px;
+    left: 15%;
+  }
+}
+
+@media (max-width: 768px) {
+  #textoc {
+    font-size: 20px;
+    left: 5%;
+    top: 4%;
+    text-align: center;
+    right: 5%;
+  }
+  .nav, #list {
+    width: 100%;
+  }
+  .nav {
+    margin-top: 35vh;
+    box-sizing: border-box;
+  }
+  #list {
+    flex-direction: column;
+    gap: 10px;
+  }
+  #list li:hover {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  #textoc {
+    font-size: 18px;
+    top: 3%;
+  }
+  .nav {
+    margin-top: 25vh;
+  }
+  #list li {
+    padding: 5px;
+  }
+  #list li:hover {
+    font-size: 20px;
+  }
+}
