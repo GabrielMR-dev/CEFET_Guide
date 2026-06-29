@@ -54,7 +54,29 @@
     font-weight: bold;
 }
 
+@media (max-width: 1200px) {
+    .creditos h1 { font-size: 2.2vw; letter-spacing: 0.3vw; }
+    .creditos p { font-size: 1.8vw; }
+    .tituloCredito { font-size: 5vw !important; }
+    .subtituloCredito { font-size: 2vw !important; }
+    .fim { font-size: 4vw !important; }
+}
 
+@media (max-width: 768px) {
+    .creditos h1 { font-size: 3.5vw; margin-top: 4vh; }
+    .creditos p { font-size: 2.8vw; margin: 0.8vh 0; }
+    .tituloCredito { font-size: 7vw !important; }
+    .subtituloCredito { font-size: 3.2vw !important; }
+    .fim { font-size: 6vw !important; margin-top: 8vh !important; }
+}
+
+@media (max-width: 480px) {
+    .creditos h1 { font-size: 5vw; margin-top: 3vh; letter-spacing: 0.4vw; }
+    .creditos p { font-size: 4vw; margin: 1vh 0; }
+    .tituloCredito { font-size: 9vw !important; }
+    .subtituloCredito { font-size: 4.5vw !important; }
+    .fim { font-size: 8vw !important; margin-top: 6vh !important; }
+    
 @keyframes rolar-creditos {
     0% {
         top: 100%;
