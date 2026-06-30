@@ -1,0 +1,152 @@
+.Inicio-Guia h1 {
+    color: white;
+    font-size: 3.5vw;
+    margin-bottom: 2vh;
+    font-family: 'Gill Sans', sans-serif;
+}
+.Inicio-Guia p {
+    color: #ffffff;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 1.3vw;
+    margin-bottom: 3vh;
+    opacity: 0.9;
+}
+
+.navegacao-direta {
+    margin-bottom: 3vh;
+    color: white;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 1.1vw;
+}
+.navegacao-direta input {
+    width: 60px;
+    padding: 0.5vh 0.5vw;
+    border-radius: 0.3vw;
+    border: 1px solid #3032a1;
+    text-align: center;
+    font-size: 1vw;
+    margin: 0 0.5vw;
+}
+.navegacao-direta button {
+    background-color: #3032a1;
+    color: white;
+    border: 1px solid #aac6ff;
+    padding: 0.6vh 1vw;
+    border-radius: 0.3vw;
+    cursor: pointer;
+    font-size: 1vw;
+    transition: background 0.2s;
+}
+.navegacao-direta button:hover {
+    background-color: #aac6ff;
+    color: #0d0d34;
+}
+
+.livro-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5vw;
+    width: 100%;
+    max-width: 75vw;
+    margin: 0 auto;
+    position: relative;
+}
+
+.livro-visor {
+    width: 100%;
+    background-color: #ffffff;
+    border: 0.25vw solid #3032a1;
+    border-radius: 0.8vw;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    min-height: 480px;
+    overflow: hidden;
+}
+
+.par-paginas.ativo {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.pagina-livro {
+    width: 50%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+.pagina-livro:first-child {
+    border-right: 1px solid rgba(0, 0, 0, 0.15);
+    box-shadow: inset -15px 0 25px rgba(0, 0, 0, 0.05);
+}
+
+.seta-nav {
+    background-color: #3032a1;
+    color: white;
+    border: 0.15vw solid #aac6ff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    flex-shrink: 0;
+}
+
+.seta-nav:hover:not(:disabled) {
+    background-color: #aac6ff;
+    color: #0d0d34;
+    transform: scale(1.1);
+}
+
+.seta-nav:disabled {
+    background-color: #555;
+    border-color: #777;
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.progresso-container {
+    margin-top: 4vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5vh;
+}
+
+.barra-progresso {
+    width: 30vw;
+    height: 8px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    overflow: hidden;
+    border: 1px solid #3032a1;
+}
+
+.progresso-atual {
+    width: 0%;
+    height: 100%;
+    background-color: #00ecff;
+    transition: width 0.3s ease-out;
+}
+
+.indicador-paginas {
+    color: #aac6ff;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 1.1vw;
+    font-weight: bold;
+}
+
+@media (max-width: 800px) {
+    .par-paginas.ativo { flex-direction: column; }
+    .pagina-livro { width: 100%; }
+    .seta-nav { width: 40px; height: 40px; font-size: 1.1rem; }
+    .navegacao-direta { font-size: 14px; }
+    .navegacao-direta input, .navegacao-direta button { font-size: 14px; }
+    .barra-progresso { width: 60vw; }
+}

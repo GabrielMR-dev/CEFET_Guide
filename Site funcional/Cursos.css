@@ -1,7 +1,5 @@
 .Inicio-Cursos h1, p {
-    background-image: linear-gradient(to right, rgb(0, 0, 0), rgb(25, 0, 84));
-    background-clip: text;
-    color: transparent;
+    color: #aac6ff;
 }
 .grid-cursos {
     display: grid;
