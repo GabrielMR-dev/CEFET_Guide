@@ -317,3 +317,64 @@ video {
 .Card-funcao:hover {
     transform: scale(1.2);
 }
+
+@media (max-width: 1200px) {
+    .menu-logo a { font-size: 22px; }
+    .menu-links a { font-size: 16px; }
+    .container { max-width: 90vw; }
+    .Inicio h1 { font-size: 45px; margin: 0 0 20px; }
+    .Inicio img { max-width: 180px; }
+    .Inicio p { font-size: 18px; }
+    .comoTudoComecou h2, .hojeEmDia h2, .aEntrada h2 { font-size: 32px; }
+    .comoTudoComecou img, .hojeEmDia img, .aEntrada img { width: 180px; }
+    video { width: 80%; height: auto; }
+    .pontosImportantes h1 { font-size: 36px; }
+    .Card { width: 24vw; }
+    .Card img { width: 100%; }
+    .Diretoria h2 { font-size: 38px; }
+    .Diretoria img { width: 220px; }
+    .Diretoria #diretora { margin: 15px auto 0; text-align: center; }
+    .bloco-campus { width: 40vw; }
+    .bloco-campus a { font-size: 16px; }
+    .funcoes h2 { font-size: 32px; }
+    .conteinerDasCards-funcoes { margin: 0 5vw; gap: 20px; }
+    .Card-funcao { width: 120px; }
+}
+
+@media (max-width: 768px) {
+    body { padding: 80px 20px 20px; }
+    .menu-fixo { flex-direction: column; gap: 10px; padding: 15px; }
+    .menu-logo a { font-size: 20px; }
+    .menu-links { gap: 15px; }
+    .menu-links a { font-size: 14px; }
+    .container { max-width: 100%; padding: 20px; border-radius: 8px; }
+    .Inicio h1 { font-size: 32px; }
+    .Inicio img { max-width: 150px; }
+    .Inicio p { font-size: 16px; margin-bottom: 50px; }
+    .comoTudoComecou, .hojeEmDia, .aEntrada, .Diretoria { margin-bottom: 50px; padding-bottom: 30px; }
+    .comoTudoComecou h2, .hojeEmDia h2, .aEntrada h2, .Diretoria h2 { font-size: 26px; text-align: center; padding: 0; margin-bottom: 15px; }
+    .comoTudoComecou img, .hojeEmDia img, .aEntrada img, .Diretoria img { float: none; display: block; margin: 0 auto 15px; width: 200px; max-width: 100%; }
+    .comoTudoComecou p, .hojeEmDia p, .aEntrada p, .Diretoria p { text-align: center; padding: 0; }
+    video { width: 100%; padding: 0 0 30px 0; margin-bottom: 50px; }
+    .pontosImportantes h1 { font-size: 28px; margin-bottom: 30px; }
+    .conteinerDasCards { grid-template-columns: repeat(2, 1fr); gap: 20px; margin: 0; margin-bottom: 50px; padding-bottom: 30px; }
+    .Card { width: 100%; }
+    .Card img { width: 100%; }
+    .imgsDaora { flex-direction: column; align-items: center; gap: 30px; max-width: 100%; margin-bottom: 50px; padding-bottom: 30px; }
+    .bloco-campus { width: 80%; }
+    .bloco-campus img { height: 30vh; }
+    .funcoes h2 { font-size: 26px; }
+    .conteinerDasCards-funcoes { grid-template-columns: repeat(2, 1fr); justify-items: center; }
+}
+
+@media (max-width: 480px) {
+    .menu-links { flex-wrap: wrap; justify-content: center; gap: 10px; }
+    .Inicio h1 { font-size: 26px; }
+    .Inicio p { font-size: 14px; }
+    .comoTudoComecou h2, .hojeEmDia h2, .aEntrada h2, .Diretoria h2 { font-size: 22px; }
+    .pontosImportantes h1 { font-size: 22px; }
+    .conteinerDasCards { grid-template-columns: 1fr; }
+    .bloco-campus { width: 100%; }
+    .funcoes h2 { font-size: 22px; }
+    .conteinerDasCards-funcoes { grid-template-columns: 1fr; }
+}
