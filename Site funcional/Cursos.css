@@ -5,18 +5,17 @@
 }
 .grid-cursos {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Mantém 3 colunas impecáveis */
+    grid-template-columns: repeat(3, 1fr);
     gap: 2vw;
     margin-top: 4vh;
 }
 
-/* O card assume todo o papel do Flexbox e de container */
 .card-curso {
-    background-color: rgb(170, 198, 255); /* Azul claro do seu padrão */
+    background-color: rgb(170, 198, 255);
     border: 0.2vw solid #3032a1;
     border-radius: 1vw;
     padding: 1.5vw;
-    height: 320px;               /* Altura simétrica para alinhar a grade */
+    height: 320px;
     box-shadow: 0 4px 15px rgba(0, 16, 135, 0.4);
     box-sizing: border-box;
     
@@ -24,22 +23,19 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    position: relative;          /* Importante para travar a camada preta interna */
-    overflow: hidden;            /* Corta os cantos da camada nos cantos arredondados */
+    position: relative;
+    overflow: hidden;
     transition: transform ease-in-out 0.2s;
 }
 
-/* Cor diferenciada para destacar as Graduações */
 .card-curso.superior {
     background-color: #d1e0ff;
 }
 
-/* Efeito de zoom do card no hover */
 .card-curso:hover {
     transform: scale(1.03);
 }
 
-/* Imagens */
 .card-curso img {
     width: 100%;
     height: 180px;
@@ -49,7 +45,6 @@
     transition: filter 0.3s ease;
 }
 
-/* Títulos visíveis na frente */
 .card-curso h3 {
     margin: 0;
     color: #0d0d34;
@@ -58,26 +53,25 @@
     font-weight: bold;
 }
 
-/* CAMADA ESCURA INTERNA (ESCONDIDA POR PADRÃO) */
 .info-escondida {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(13, 13, 52, 0.95); /* Azul escuro igual ao seu fundo */
+    background-color: rgba(13, 13, 52, 0.95); 
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 2vw;
     box-sizing: border-box;
-    opacity: 0;                  /* Invisível inicialmente */
+    opacity: 0;                  
     transition: opacity 0.3s ease-in-out;
 }
 
-/* Texto descritivo que surge */
+
 .info-escondida p {
-    color: #aac6ff;              /* Azul claro com ótimo contraste */
+    color: #aac6ff;              
     font-family: 'Segoe UI', sans-serif;
     font-size: 1.2vw;
     line-height: 1.6;
@@ -85,11 +79,10 @@
     text-align: center;
 }
 
-/* INTERAÇÕES NO CARD AO PASSAR O MOUSE */
 .card-curso:hover .info-escondida {
-    opacity: 1;                  /* Exibe a descrição do curso */
+    opacity: 1;                  
 }
 
 .card-curso:hover img {
-    filter: blur(2px);            /* Borra levemente a imagem ao fundo */
+    filter: blur(2px);            
 }

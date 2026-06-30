@@ -1,0 +1,165 @@
+/* DESIGN DA INTRODUÇÃO (Alinhado com a identidade do site) */
+.Inicio-Mapas h1 {
+    color: white;
+    font-size: 3.5vw;
+    margin-bottom: 2vh;
+    font-family: 'Gill Sans', sans-serif;
+}
+
+.Inicio-Mapas p {
+    color: #ffffff;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 1.3vw;
+    margin-bottom: 5vh;
+    opacity: 0.9;
+}
+
+/* TÍTULOS DE CADA SEÇÃO/CAMPUS */
+.secao-mapa {
+    margin-bottom: 10vh; /* Dá um espaçamento confortável entre o C1 e o C2 */
+}
+
+.secao-mapa h2 {
+    color: white;
+    font-size: 2.2vw;
+    font-family: 'Gill Sans', sans-serif;
+    margin-bottom: 3vh;
+    border-bottom: 2px solid #3032a1;
+    padding-bottom: 1vh;
+    text-align: left;
+}
+
+/* CONTAINER CENTRAL DOS MAPAS (IGUAIS PARA AMBOS) */
+.container-mapa-interativo {
+    position: relative;
+    width: 100%;
+    max-width: 60vw;             /* Enquadra perfeitamente na área central azul */
+    margin: 0 auto;
+    border: 0.25vw solid #3032a1;
+    border-radius: 1vw;
+    overflow: visible;           /* Permite que as caixas de informação subam além da borda */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    background-color: #3d3fc9;   /* Fundo preventivo enquanto a imagem carrega */
+}
+
+.imagem-mapa {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 0.8vw;
+}
+
+/* CONFIGURAÇÃO DOS PINOS EM PORCENTAGEM */
+.pino-interativo {
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    transform: translate(-50%, -50%); /* Garante que o centro exato do ponto seja o alvo */
+    cursor: pointer;
+    z-index: 5;
+}
+
+/* O PONTO LUMINOSO */
+.ponto-piscante {
+    width: 18px;
+    height: 18px;
+    background-color: #00ecff;   /* Ciano brilhante para contrastar com o cinza/verde dos mapas */
+    border-radius: 50%;
+    border: 2px solid white;
+    position: relative;
+    box-shadow: 0 0 8px #00ecff;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Efeito de Ondas do Radar (Pulsação contínua) */
+.ponto-piscante::before {
+    content: '';
+    position: absolute;
+    top: -2px; left: -2px;
+    width: 18px; height: 18px;
+    border: 2px solid #00ecff;
+    border-radius: 50%;
+    animation: radar-efeito 1.6s infinite ease-out;
+}
+
+@keyframes radar-efeito {
+    0% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(3.5); opacity: 0; }
+}
+
+/* BALÃO DE DIÁLOGO POP-UP (ESCONDIDO POR PADRÃO) */
+.balao-info {
+    position: absolute;
+    bottom: 34px;                /* Posiciona logo acima do pino */
+    left: 50%;
+    transform: translateX(-50%) scale(0.85); /* Efeito sutil de tamanho menor antes do hover */
+    width: 250px;
+    background-color: rgba(13, 13, 52, 0.96); /* Azul escuro idêntico ao menu superior */
+    border: 0.15vw solid #3032a1;
+    border-radius: 0.6vw;
+    padding: 12px 15px;
+    color: white;
+    text-align: center;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.5);
+    
+    opacity: 0;
+    pointer-events: none;        /* Evita que bloqueie cliques indesejados na tela */
+    transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Animação suave com "salto" */
+}
+
+/* Setinha inferior do balão apontando para o pino */
+.balao-info::after {
+    content: '';
+    position: absolute;
+    top: 100%; left: 50%;
+    transform: translateX(-50%);
+    border-width: 8px;
+    border-style: solid;
+    border-color: rgba(13, 13, 52, 0.96) transparent transparent transparent;
+}
+
+.balao-info h3 {
+    margin: 0 0 5px 0;
+    font-size: 1.15rem;
+    font-family: 'Gill Sans', sans-serif;
+    color: #00ecff;              /* Destaca o nome do bloco em ciano */
+}
+
+.balao-info p {
+    margin: 0;
+    font-size: 0.85rem;
+    color: #aac6ff;
+    line-height: 1.4;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* ATIVAÇÃO DO HOVER (CSS PURO) */
+.pino-interativo:hover {
+    z-index: 15;                 /* Garante que o balão aberto fique acima de qualquer outro pino */
+}
+
+.pino-interativo:hover .balao-info {
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+}
+
+/* Transição de cores ao focar no ponto */
+.pino-interativo:hover .ponto-piscante {
+    background-color: #ff0055;   /* Altera para Magenta/Rosa choque */
+    box-shadow: 0 0 8px #ff0055;
+}
+
+.pino-interativo:hover .ponto-piscante::before {
+    border-color: #ff0055;
+}
+
+/* AJUSTES IMPORTANTES DE RESPONSIVIDADE PARA CELULARES */
+@media (max-width: 768px) {
+    .container-mapa-interativo { max-width: 95vw; } /* Ocupa quase toda a largura da tela móvel */
+    .balao-info { 
+        width: 190px;            /* Reduz a largura da caixinha para não cortar nas bordas do ecrã */
+        padding: 10px;
+    }
+    .balao-info h3 { font-size: 1rem; }
+    .balao-info p { font-size: 0.75rem; }
+}
