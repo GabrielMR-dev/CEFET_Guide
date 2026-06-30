@@ -317,3 +317,24 @@ video {
 .Card-funcao:hover {
     transform: scale(1.2);
 }
+.pesquisa{
+    display:flex;
+    flex-direction:column;
+    position:relative;
+}
+
+#barraPesquisa{
+    padding:8px;
+    width:220px;
+    border-radius:8px;
+    border:none;
+}
+
+#resultadoPesquisa{
+    display:none;
+    background:white;
+    color:black;
+    margin-top:5px;
+    padding:10px;
+    border-radius:8px;
+}
