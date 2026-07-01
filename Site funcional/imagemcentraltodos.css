@@ -28,28 +28,28 @@ body{
 }
  #list{
   width: 500px;
-  margin: 0;
+  margin: 1;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 0;
+  padding: 1;
  }
 
 #list li {
-    flex: 1;
+    flex: 2;
   text-align: center;
   transition: all 200ms ease;
   overflow: hidden;
   position: relative;
   cursor: pointer;
-  padding: 10px;
+  padding: 20px;
 
 }
 
 #list li:hover {
   background-color:azure;
   opacity: 0.4;
-  font-size: 30px;
+  font-size: 10px;
   border: 0.2vw solid #3032a1;
     box-shadow: 0 4px 20px rgb(0, 16, 135);
 }
@@ -89,50 +89,45 @@ body{
     margin: 45vh auto 0 auto;
     padding: 0 20px;   
 }
-
-@media (max-width: 1200px) {
-  #textoc {
-    font-size: 22px;
-    left: 15%;
-  }
+#seta{
+  font-size: 45px;
+  font-weight: 600;
+  position: absolute;
+  top: 80%;
+  left:5%;
+  transition: color 200ms ease;
 }
-
-@media (max-width: 768px) {
-  #textoc {
-    font-size: 20px;
-    left: 5%;
-    top: 4%;
-    text-align: center;
-    right: 5%;
-  }
-  .nav, #list {
-    width: 100%;
-  }
-  .nav {
-    margin-top: 35vh;
-    box-sizing: border-box;
-  }
-  #list {
-    flex-direction: column;
-    gap: 10px;
-  }
-  #list li:hover {
-    font-size: 24px;
-  }
+#seta a{
+  color: black;
+  border: solid blue 3px;
+  text-decoration: none; 
+  border-radius: 2px;
+  box-shadow: 0 4px 20px rgb(0, 16, 135);
+  background-color: whitesmoke;
+  font-size: 40px;
 }
-
-@media (max-width: 480px) {
-  #textoc {
-    font-size: 18px;
-    top: 3%;
-  }
-  .nav {
-    margin-top: 25vh;
-  }
-  #list li {
-    padding: 5px;
-  }
-  #list li:hover {
-    font-size: 20px;
-  }
+#seta :hover{
+   font-size: 50px;
+}
+#seta :hover a{
+  font-size: 30px;
+}
+#ensino{
+  font-size: 15px
+}
+#ensino :hover{
+  font-size: 25px;
+}
+#prof{
+  font-size: 15px
+}
+#prof :hover{
+  font-size: 22px;
+  font-weight: 40px;
+}
+#grad{
+  font-size: 15px
+}
+#grad :hover{
+  font-size: 20px;
 }
