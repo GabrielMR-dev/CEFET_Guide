@@ -22,7 +22,7 @@
     gap: 2vh;
 }
 
-.faq-item {
+.item {
     background-color: rgba(13, 13, 52, 0.5);
     border: 0.15vw solid #3032a1;
     border-radius: 0.6vw;
@@ -30,13 +30,13 @@
     transition: all 0.3s ease;
 }
 
-.faq-item[open] {
+.item[open] {
     border-color: #00ecff;
     background-color: rgba(13, 13, 52, 0.8);
     box-shadow: 0 4px 15px rgba(0, 236, 255, 0.1);
 }
 
-.faq-pergunta {
+.pergunta {
     padding: 2.5vh 2vw;
     color: white;
     font-size: 1.2vw;
@@ -49,19 +49,19 @@
     align-items: center;
 }
 
-.faq-pergunta::after {
+.pergunta::after {
     content: '➔';
     color: #aac6ff;
     transition: transform 0.3s ease;
     font-size: 1vw;
 }
 
-.faq-item[open] .faq-pergunta::after {
+.item[open] .faq-pergunta::after {
     transform: rotate(90deg);
     color: #00ecff;
 }
 
-.faq-resposta {
+.resposta {
     padding: 0 2vw 2.5vh 2vw;
     color: #aac6ff;
     font-family: 'Segoe UI', sans-serif;
@@ -71,11 +71,11 @@
     padding-top: 2vh;
 }
 
-.faq-resposta p {
+.resposta p {
     margin: 0;
 }
 
-.ajuda-contato {
+.contato {
     max-width: 65vw;
     margin: 0 auto;
     background-color: rgb(13, 13, 52);
@@ -85,20 +85,24 @@
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
 
-.ajuda-contato h3 {
+.contato h3 {
     color: #00ecff;
     font-family: 'Gill Sans', sans-serif;
     font-size: 1.6vw;
     margin: 0 0 1vh 0;
 }
 
-.ajuda-contato p {
+.contato p {
     text-align: left;
     color: white;
     font-family: 'Segoe UI', sans-serif;
     font-size: 1.1vw;
     margin: 0;
     opacity: 0.9;
+}
+.contato a {
+    text-decoration: none;
+    color: #00858f;
 }
 
 @media (max-width: 768px) {
