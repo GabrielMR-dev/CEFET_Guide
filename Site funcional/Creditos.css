@@ -1,7 +1,6 @@
-/* Customização do body apenas para a página de créditos */
 .body-creditos {
-    background: #000000 !important; /* Força o fundo a ficar totalmente preto como no cinema */
-    overflow: hidden;                /* Esconde as barras de rolagem normais do navegador */
+    background: #000000 !important;
+    overflow: hidden;
 }
 
 .janela-cinema {
@@ -86,4 +85,5 @@
         top: 0%;
         transform: translateY(-120%);
     }
+}
 }
