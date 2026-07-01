@@ -69,32 +69,3 @@ html, body{
     left: 50%;
   }
 }
-
-@media (max-width: 1200px) {
-  #Texto, #Texto2 {
-    font-size: 60px;
-  }
-  #VAZA {
-    font-size: 70px;
-  }
-}
-
-@media (max-width: 768px) {
-  #Texto, #Texto2 {
-    font-size: 45px;
-  }
-  #VAZA {
-    font-size: 50px;
-    letter-spacing: 3px;
-  }
-}
-
-@media (max-width: 480px) {
-  #Texto, #Texto2 {
-    font-size: 32px;
-  }
-  #VAZA {
-    font-size: 36px;
-    letter-spacing: 2px;
-  }
-}
