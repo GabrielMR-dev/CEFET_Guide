@@ -1,4 +1,3 @@
-/* DESIGN DA INTRODUÇÃO */
 .Inicio-Info h1 {
     color: white;
     font-size: 3.5vw;
@@ -18,9 +17,7 @@
     line-height: 1.5;
 }
 
-/* ESTILIZAÇÃO DOS SUBTÍTULOS */
-.secao-referencias h2,
-.secao-equipe h2 {
+.referencias h2, .equipe h2 {
     color: white;
     font-size: 2.2vw;
     font-family: 'Gill Sans', sans-serif;
@@ -33,9 +30,12 @@
     margin-right: auto;
 }
 
-/* CAIXA DE REFERÊNCIAS */
-.secao-referencias {
+.referencias {
     margin-bottom: 8vh;
+}
+.lista-referencias a {
+    text-decoration: none;
+    color: aquamarine;
 }
 
 .lista-referencias {
@@ -45,7 +45,7 @@
     background-color: rgba(13, 13, 52, 0.4);
     border: 1px solid #3032a1;
     border-radius: 0.6vw;
-    padding: 3vh 3vw 3vh 4vw; /* Margem interna maior na esquerda por causa dos marcadores */
+    padding: 3vh 3vw 3vh 4vw;
     box-sizing: border-box;
 }
 
@@ -58,10 +58,9 @@
 }
 
 .lista-referencias li strong {
-    color: #00ecff; /* Destaca o escopo da referência */
+    color: #00ecff;
 }
 
-/* SEÇÃO DE CONTATOS DA EQUIPE */
 .secao-equipe {
     margin-bottom: 10vh;
 }
@@ -75,9 +74,8 @@
     margin: 0 auto;
 }
 
-/* CARD DE CADA INTEGRANTE */
 .card-integrante {
-    flex: 1;                     /* Faz com que todos os cards tenham exatamente o mesmo tamanho */
+    flex: 1;
     background-color: rgb(13, 13, 52);
     border: 0.15vw solid #3032a1;
     border-radius: 0.8vw;
@@ -108,38 +106,37 @@
     opacity: 0.85;
 }
 
-.contato-simples {
+.contato {
     border-top: 1px solid rgba(48, 50, 161, 0.4);
     padding-top: 2vh;
 }
 
-.contato-simples p {
+.contato p {
     color: white;
     font-family: 'Segoe UI', sans-serif;
     font-size: 1vw;
     margin: 0;
-    word-break: break-all;      /* Evita que e-mails muito grandes quebrem o layout do card */
+    word-break: break-all;
 }
 
-.contato-simples a {
+.contato a {
     color: #aac6ff;
     text-decoration: none;
     transition: color 0.2s;
 }
 
-.contato-simples a:hover {
+.contato a:hover {
     color: white;
     text-decoration: underline;
 }
 
-/* RESPONSIVIDADE PARA DISPOSITIVOS MÓVEIS */
 @media (max-width: 800px) {
     .Inicio-Info p, .secao-referencias h2, .secao-equipe h2, .lista-referencias, .grid-integrantes {
         max-width: 95vw;
     }
     
     .grid-integrantes {
-        flex-direction: column;  /* Empilha os integrantes no celular */
+        flex-direction: column;
         gap: 3vh;
     }
     
