@@ -1,0 +1,152 @@
+/* DESIGN DA INTRODUÇÃO */
+.Inicio-Info h1 {
+    color: white;
+    font-size: 3.5vw;
+    margin-bottom: 2vh;
+    font-family: 'Gill Sans', sans-serif;
+}
+
+.Inicio-Info p {
+    color: #ffffff;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 1.3vw;
+    margin-bottom: 6vh;
+    opacity: 0.9;
+    max-width: 65vw;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.5;
+}
+
+/* ESTILIZAÇÃO DOS SUBTÍTULOS */
+.secao-referencias h2,
+.secao-equipe h2 {
+    color: white;
+    font-size: 2.2vw;
+    font-family: 'Gill Sans', sans-serif;
+    margin-bottom: 3vh;
+    border-bottom: 2px solid #3032a1;
+    padding-bottom: 1vh;
+    text-align: left;
+    max-width: 65vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* CAIXA DE REFERÊNCIAS */
+.secao-referencias {
+    margin-bottom: 8vh;
+}
+
+.lista-referencias {
+    max-width: 65vw;
+    margin: 0 auto;
+    text-align: left;
+    background-color: rgba(13, 13, 52, 0.4);
+    border: 1px solid #3032a1;
+    border-radius: 0.6vw;
+    padding: 3vh 3vw 3vh 4vw; /* Margem interna maior na esquerda por causa dos marcadores */
+    box-sizing: border-box;
+}
+
+.lista-referencias li {
+    color: #aac6ff;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 1.1vw;
+    line-height: 1.7;
+    margin-bottom: 1.5h;
+}
+
+.lista-referencias li strong {
+    color: #00ecff; /* Destaca o escopo da referência */
+}
+
+/* SEÇÃO DE CONTATOS DA EQUIPE */
+.secao-equipe {
+    margin-bottom: 10vh;
+}
+
+.grid-integrantes {
+    display: flex;
+    justify-content: center;
+    gap: 2vw;
+    width: 100%;
+    max-width: 65vw;
+    margin: 0 auto;
+}
+
+/* CARD DE CADA INTEGRANTE */
+.card-integrante {
+    flex: 1;                     /* Faz com que todos os cards tenham exatamente o mesmo tamanho */
+    background-color: rgb(13, 13, 52);
+    border: 0.15vw solid #3032a1;
+    border-radius: 0.8vw;
+    padding: 3vh 1.5vw;
+    text-align: center;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    transition: border-color 0.2s, transform 0.2s;
+}
+
+.card-integrante:hover {
+    border-color: #00ecff;
+    transform: translateY(-3px);
+}
+
+.card-integrante h3 {
+    color: white;
+    font-family: 'Gill Sans', sans-serif;
+    font-size: 1.5vw;
+    margin: 0 0 0.5vh 0;
+}
+
+.card-integrante .funcao {
+    color: #00ecff;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 0.95vw;
+    font-weight: bold;
+    margin: 0 0 3vh 0;
+    opacity: 0.85;
+}
+
+.contato-simples {
+    border-top: 1px solid rgba(48, 50, 161, 0.4);
+    padding-top: 2vh;
+}
+
+.contato-simples p {
+    color: white;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 1vw;
+    margin: 0;
+    word-break: break-all;      /* Evita que e-mails muito grandes quebrem o layout do card */
+}
+
+.contato-simples a {
+    color: #aac6ff;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.contato-simples a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+/* RESPONSIVIDADE PARA DISPOSITIVOS MÓVEIS */
+@media (max-width: 800px) {
+    .Inicio-Info p, .secao-referencias h2, .secao-equipe h2, .lista-referencias, .grid-integrantes {
+        max-width: 95vw;
+    }
+    
+    .grid-integrantes {
+        flex-direction: column;  /* Empilha os integrantes no celular */
+        gap: 3vh;
+    }
+    
+    .secao-referencias h2, .secao-equipe h2 { font-size: 20px; }
+    .lista-referencias li { font-size: 14px; }
+    
+    .card-integrante h3 { font-size: 18px; }
+    .card-integrante .funcao { font-size: 13px; }
+    .contato-simples p { font-size: 13px; }
+}

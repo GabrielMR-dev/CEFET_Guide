@@ -1,0 +1,110 @@
+.Inicio-Ajuda h1 {
+    color: white;
+    font-size: 3.5vw;
+    margin-bottom: 2vh;
+    font-family: 'Gill Sans', sans-serif;
+}
+
+.Inicio-Ajuda p {
+    color: #ffffff;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 1.3vw;
+    margin-bottom: 5vh;
+    opacity: 0.9;
+}
+
+.faq-container {
+    width: 100%;
+    max-width: 65vw;
+    margin: 0 auto 6vh auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+}
+
+.faq-item {
+    background-color: rgba(13, 13, 52, 0.5);
+    border: 0.15vw solid #3032a1;
+    border-radius: 0.6vw;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.faq-item[open] {
+    border-color: #00ecff;
+    background-color: rgba(13, 13, 52, 0.8);
+    box-shadow: 0 4px 15px rgba(0, 236, 255, 0.1);
+}
+
+.faq-pergunta {
+    padding: 2.5vh 2vw;
+    color: white;
+    font-size: 1.2vw;
+    font-family: 'Gill Sans', sans-serif;
+    cursor: pointer;
+    font-weight: bold;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-pergunta::after {
+    content: '➔';
+    color: #aac6ff;
+    transition: transform 0.3s ease;
+    font-size: 1vw;
+}
+
+.faq-item[open] .faq-pergunta::after {
+    transform: rotate(90deg);
+    color: #00ecff;
+}
+
+.faq-resposta {
+    padding: 0 2vw 2.5vh 2vw;
+    color: #aac6ff;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 1.05vw;
+    line-height: 1.6;
+    border-top: 1px solid rgba(48, 50, 161, 0.3);
+    padding-top: 2vh;
+}
+
+.faq-resposta p {
+    margin: 0;
+}
+
+.ajuda-contato {
+    max-width: 65vw;
+    margin: 0 auto;
+    background-color: rgb(13, 13, 52);
+    border: 0.2vw solid #3032a1;
+    border-radius: 0.8vw;
+    padding: 3vh 2vw;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.ajuda-contato h3 {
+    color: #00ecff;
+    font-family: 'Gill Sans', sans-serif;
+    font-size: 1.6vw;
+    margin: 0 0 1vh 0;
+}
+
+.ajuda-contato p {
+    text-align: left;
+    color: white;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 1.1vw;
+    margin: 0;
+    opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+    .faq-container, .ajuda-contato { max-width: 95vw; }
+    .faq-pergunta { font-size: 16px; }
+    .faq-resposta { font-size: 14px; }
+    .ajuda-contato h3 { font-size: 18px; }
+    .ajuda-contato p { font-size: 14px; }
+}
