@@ -40,6 +40,68 @@
     font-size: 4vw !important;
     font-weight: bold;
     color: #ffffff !important;
+}.body-creditos {
+    background: #000000 !important;
+    overflow: hidden;
+}
+
+.janela-cinema {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.creditos {
+    position: absolute;
+    top: 100%;
+    text-align: center;
+    font-family: 'Gill Sans', sans-serif;
+    color: #ffffff;
+    
+    animation: rolar-creditos 30s linear infinite; 
+}
+
+.creditos h1 {
+    font-size: 1.8vw;
+    color: #aac6ff;
+    margin-top: 6vh;
+    margin-bottom: 1vh;
+    letter-spacing: 0.2vw;
+}
+
+.creditos p {
+    font-size: 1.4vw;
+    margin: 0.5vh 0;
+    color: #e5e7eb;
+}
+
+.tituloCredito {
+    font-family: Georgia, serif !important;
+    font-size: 4vw !important;
+    font-weight: bold;
+    color: #ffffff !important;
+}
+
+.subtituloCredito {
+    font-size: 1.6vw !important;
+    color: #5a96ff !important;
+}
+
+.fim {
+    font-size: 3vw !important;
+    margin-top: 10vh !important;
+    font-weight: bold;
+}
+
+@media (max-width: 1200px) {
+    .creditos h1 { font-size: 2.2vw; letter-spacing: 0.3vw; }
+    .creditos p { font-size: 1.8vw; }
+    .tituloCredito { font-size: 5vw !important; }
+    .subtituloCredito { font-size: 2vw !important; }
+    .fim { font-size: 4vw !important; }
+}
 }
 
 .subtituloCredito {
@@ -75,6 +137,7 @@
     .tituloCredito { font-size: 9vw !important; }
     .subtituloCredito { font-size: 4.5vw !important; }
     .fim { font-size: 8vw !important; margin-top: 6vh !important; }
+}
     
 @keyframes rolar-creditos {
     0% {
@@ -82,8 +145,7 @@
         transform: translateY(0);
     }
     100% {
-        top: 0%;
-        transform: translateY(-120%);
+        top: -100%; /* Mudei para -100% para garantir que suba tudo, sem precisar do translateY agressivo */
+        transform: translateY(0);
     }
-}
 }
