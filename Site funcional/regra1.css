@@ -47,3 +47,44 @@ body{
 #seta :hover a{
   font-size: 30px;
 }
+@media(max-width:1024px){
+
+    #Texto{
+        font-size:55px;
+    }
+
+    #Texto2{
+        font-size:55px;
+    }
+
+    #VAZA{
+        font-size:65px;
+    }
+
+}
+@media (max-width:768px){
+
+    #Texto{
+        font-size:30px;
+    }
+
+    #Texto2{
+        font-size:28px;
+    }
+
+    #VAZA{
+        font-size:40px;
+        width:90%;
+        text-align:center;
+    }
+
+    #seta{
+        top:88%;
+        left:3%;
+    }
+
+    #seta a{
+        font-size:28px;
+    }
+
+}

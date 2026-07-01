@@ -131,3 +131,102 @@ body{
 #grad :hover{
   font-size: 20px;
 }
+@media (max-width: 1024px){
+
+    #textoc{
+        font-size: 22px;
+        left: 10%;
+        right: 10%;
+        top: 8%;
+        text-align: center;
+    }
+
+    .nav{
+        width: 90%;
+        margin-top: 40vh;
+    }
+
+    #list{
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    #list li{
+        flex: 1 1 40%;
+    }
+
+    #list li a{
+        font-size: 18px;
+    }
+
+    .container{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #seta{
+        top: 90%;
+        left: 3%;
+    }
+
+    #seta a{
+        font-size: 35px;
+    }
+}
+@media (max-width: 768px){
+
+    #textoc{
+        font-size: 18px;
+        left: 5%;
+        right: 5%;
+        top: 5%;
+        text-align: center;
+    }
+
+    .nav{
+        width: 95%;
+        margin-top: 32vh;
+        padding: 0;
+    }
+
+    #list{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    #list li{
+        width: 90%;
+        padding: 12px;
+    }
+
+    #list li a{
+        font-size: 18px;
+        padding: 10px;
+    }
+
+    .container{
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    #seta{
+        position: fixed;
+        top: auto;
+        bottom: 20px;
+        left: 20px;
+    }
+
+    #seta a{
+        font-size: 28px;
+    }
+
+    #ensino,
+    #prof,
+    #grad{
+        font-size: 16px;
+    }
+}

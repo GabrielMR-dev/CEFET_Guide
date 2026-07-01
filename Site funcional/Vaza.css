@@ -69,3 +69,74 @@ html, body{
     left: 50%;
   }
 }
+#seta{
+  font-size: 45px;
+  font-weight: 600;
+  position:absolute;
+  top: 70%;
+  left:5%;
+  transition: color 200ms ease;
+}
+#seta a{
+  color: black;
+  border: solid blue 3px;
+  text-decoration: none; 
+  border-radius: 2px;
+  box-shadow: 0 4px 20px rgb(0, 16, 135);
+  background-color: whitesmoke;
+  font-size: 40px;
+}
+#seta :hover{
+   font-size: 50px;
+}
+#seta :hover a{
+  font-size: 30px;
+}
+@media(max-width: 1024px){
+
+    body{
+        margin:20px;
+    }
+
+    #titulo{
+        font-size:30px;
+    }
+
+    .regras{
+        font-size:16px;
+    }
+
+    #seta{
+        top:90%;
+    }
+
+}
+
+@media(max-width:768px){
+
+    body{
+        margin:15px;
+    }
+
+    #titulo{
+        font-size:22px;
+    }
+
+    .regras{
+        font-size:14px;
+    }
+
+    .regras li{
+        margin-bottom:18px;
+    }
+
+    #seta{
+        top:92%;
+        left:3%;
+    }
+
+    #seta a{
+        font-size:28px;
+    }
+
+}

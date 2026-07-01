@@ -15,6 +15,15 @@
         <li><a href="#funcoes">Funções</a></li>
         <li><a href="Creditos.html">Créditos</a></li>
     </ul>
+    <div class="pesquisa">
+        <input
+            type="text"
+            id="barraPesquisa"
+            placeholder="Pesquisar..."
+            onkeyup="pesquisar()"
+        >
+        <div id="resultadoPesquisa"></div>
+    </div>
 </nav>
 <main class="container">
     <div class="Inicio" id="Inicio">
@@ -150,5 +159,6 @@
             </a>
         </div>
     </div>
+    <script src=pesquisa.js></script>
 </main>
 </body>

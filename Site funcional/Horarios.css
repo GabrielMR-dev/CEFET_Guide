@@ -121,12 +121,73 @@
     font-size: 0.75vw;
     padding: 0.4vh;
 }
+@media (max-width:1024px){
 
-@media (max-width: 800px) {
-    .grid-horarios { max-width: 95vw; }
-    .card-horario h3 { font-size: 18px; }
-    .card-horario .sub-card { font-size: 13px; }
-    .grade-horaria { font-size: 11px; }
-    .grade-horaria td .sala { font-size: 9px; }
-    .divisor-turno td { font-size: 11px; }
+    .Inicio-Horarios h1{
+        font-size:40px;
+    }
+
+    .Inicio-Horarios p{
+        font-size:18px;
+    }
+
+    .grid-horarios{
+        max-width:95vw;
+        gap:20px;
+    }
+
+    .card-horario h3{
+        font-size:24px;
+    }
+
+    .card-horario .sub-card{
+        font-size:16px;
+    }
+
+    .grade-horaria{
+        font-size:14px;
+    }
+
+    .grade-horaria td .sala{
+        font-size:11px;
+    }
+
+}
+@media (max-width:768px){
+
+    .Inicio-Horarios h1{
+        font-size:30px;
+        text-align:center;
+    }
+
+    .Inicio-Horarios p{
+        font-size:15px;
+        text-align:center;
+    }
+
+    .grid-horarios{
+        grid-template-columns:1fr;
+        max-width:95vw;
+    }
+
+    .card-horario h3{
+        font-size:22px;
+    }
+
+    .card-horario .sub-card{
+        font-size:14px;
+    }
+
+    .grade-horaria{
+        font-size:12px;
+    }
+
+    .grade-horaria td .sala{
+        font-size:10px;
+    }
+
+    .divisor-turno td{
+        font-size:11px;
+    }
+
 }

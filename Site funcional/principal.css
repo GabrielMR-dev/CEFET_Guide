@@ -338,3 +338,238 @@ video {
     padding:10px;
     border-radius:8px;
 }
+@media (max-width: 1024px) {
+
+    body{
+        padding: 12vh 3vw;
+    }
+
+    .menu-fixo{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2vh;
+    }
+
+    .menu-logo a{
+        font-size: 3vw;
+    }
+
+    .menu-links{
+        gap: 3vw;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .menu-links a{
+        font-size: 2vw;
+    }
+
+    #barraPesquisa{
+        width: 180px;
+    }
+
+    .container{
+        max-width: 95vw;
+        padding: 25px;
+    }
+
+    .Inicio h1{
+        font-size: 7vw;
+        margin: 0 0 4vh;
+    }
+
+    .Inicio img{
+        max-width: 30vw;
+    }
+
+    .Inicio p{
+        font-size: 2.5vw;
+    }
+
+    .comoTudoComecou img,
+    .hojeEmDia img,
+    .aEntrada img,
+    .Diretoria img{
+        float:none;
+        display:block;
+        margin:20px auto;
+        width:40vw;
+    }
+
+    .comoTudoComecou p,
+    .hojeEmDia p,
+    .aEntrada p,
+    .Diretoria p{
+        display:block;
+        text-align:center;
+        padding:0 2vw;
+    }
+
+    video{
+        width:90%;
+        height:auto;
+        padding:0;
+    }
+
+    .conteinerDasCards{
+        grid-template-columns:repeat(2,1fr);
+        justify-items:center;
+    }
+
+    .Card{
+        width:35vw;
+    }
+
+    .Card img{
+        width:34vw;
+    }
+
+    .imgsDaora{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .bloco-campus{
+        width:70vw;
+    }
+
+    .bloco-campus a{
+        font-size:2vw;
+    }
+
+    .conteinerDasCards-funcoes{
+        grid-template-columns:repeat(2,1fr);
+        margin:0;
+        justify-items:center;
+        row-gap:3vh;
+    }
+
+    .Card-funcao{
+        width:25vw;
+    }
+}
+@media (max-width:768px){
+
+    body{
+        padding:15vh 2vw 4vh;
+    }
+
+    .menu-fixo{
+        flex-direction:column;
+        gap:10px;
+        padding:10px;
+    }
+
+    .menu-logo a{
+        font-size:7vw;
+    }
+
+    .menu-links{
+        flex-direction:column;
+        align-items:center;
+        gap:10px;
+    }
+
+    .menu-links a{
+        font-size:4.5vw;
+    }
+
+    #barraPesquisa{
+        width:90%;
+    }
+
+    .container{
+        max-width:100%;
+        padding:15px;
+    }
+
+    .Inicio h1{
+        font-size:10vw;
+    }
+
+    .Inicio img{
+        max-width:55vw;
+    }
+
+    .Inicio p{
+        font-size:4vw;
+    }
+
+    .comoTudoComecou h2,
+    .hojeEmDia h2,
+    .aEntrada h2,
+    .Diretoria h2,
+    .funcoes h2,
+    .pontosImportantes h1{
+        font-size:8vw;
+        text-align:center;
+        padding:0;
+    }
+
+    .comoTudoComecou img,
+    .hojeEmDia img,
+    .aEntrada img,
+    .Diretoria img{
+        width:70vw;
+    }
+
+    .conteinerDasCards{
+        grid-template-columns:1fr;
+    }
+
+    .Card{
+        width:80vw;
+    }
+
+    .Card img{
+        width:78vw;
+    }
+
+    .Card h2,
+    .Card h3,
+    .Card h4{
+        text-align:center;
+        padding-left:0;
+    }
+
+    .imgsDaora{
+        flex-direction:column;
+        gap:5vh;
+    }
+
+    .bloco-campus{
+        width:90%;
+    }
+
+    .bloco-campus img{
+        height:auto;
+    }
+
+    .bloco-campus a{
+        font-size:4vw;
+    }
+
+    .conteinerDasCards-funcoes{
+        grid-template-columns:1fr;
+        justify-items:center;
+        row-gap:20px;
+    }
+
+    .Card-funcao{
+        width:60vw;
+    }
+
+    .Card-funcao h3{
+        text-align:center;
+    }
+
+    .Diretoria #diretora{
+        margin:0;
+        text-align:center;
+    }
+
+    video{
+        width:100%;
+        height:auto;
+    }
+}
