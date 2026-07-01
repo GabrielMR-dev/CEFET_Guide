@@ -1,95 +1,133 @@
-.Inicio-Cursos h1, p {
-    background-image: linear-gradient(to right, rgb(0, 0, 0), rgb(25, 0, 84));
-    background-clip: text;
-    color: transparent;
-}
-.grid-cursos {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Mantém 3 colunas impecáveis */
-    gap: 2vw;
-    margin-top: 4vh;
+.Inicio-Horarios h1 {
+    color: white;
+    font-size: 3.5vw;
+    margin-bottom: 2vh;
+    font-family: 'Gill Sans', sans-serif;
 }
 
-/* O card assume todo o papel do Flexbox e de container */
-.card-curso {
-    background-color: rgb(170, 198, 255); /* Azul claro do seu padrão */
-    border: 0.2vw solid #3032a1;
-    border-radius: 1vw;
-    padding: 1.5vw;
-    height: 320px;               /* Altura simétrica para alinhar a grade */
-    box-shadow: 0 4px 15px rgba(0, 16, 135, 0.4);
-    box-sizing: border-box;
-    
+.Inicio-Horarios p {
+    color: #ffffff;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 1.3vw;
+    margin-bottom: 5vh;
+    opacity: 0.9;
+}
+
+.grid-horarios {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5vw;
+    width: 100%;
+    max-width: 75vw;
+    margin: 0 auto 10vh auto;
+}
+
+.card-horario {
+    background-color: rgb(13, 13, 52);
+    border: 0.15vw solid #3032a1;
+    border-radius: 0.8vw;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    position: relative;          /* Importante para travar a camada preta interna */
-    overflow: hidden;            /* Corta os cantos da camada nos cantos arredondados */
-    transition: transform ease-in-out 0.2s;
+    padding-bottom: 2vh;
 }
 
-/* Cor diferenciada para destacar as Graduações */
-.card-curso.superior {
-    background-color: #d1e0ff;
-}
-
-/* Efeito de zoom do card no hover */
-.card-curso:hover {
-    transform: scale(1.03);
-}
-
-/* Imagens */
-.card-curso img {
+.card-horario img {
     width: 100%;
     height: 180px;
     object-fit: cover;
-    border-radius: 0.5vw;
-    margin-bottom: 15px;
-    transition: filter 0.3s ease;
+    border-bottom: 0.15vw solid #3032a1;
 }
 
-/* Títulos visíveis na frente */
-.card-curso h3 {
-    margin: 0;
-    color: #0d0d34;
+.card-horario h3 {
+    color: white;
     font-family: 'Gill Sans', sans-serif;
     font-size: 1.6vw;
-    font-weight: bold;
+    margin: 2vh 0 1vh 0;
 }
 
-/* CAMADA ESCURA INTERNA (ESCONDIDA POR PADRÃO) */
-.info-escondida {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(13, 13, 52, 0.95); /* Azul escuro igual ao seu fundo */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 2vw;
-    box-sizing: border-box;
-    opacity: 0;                  /* Invisível inicialmente */
-    transition: opacity 0.3s ease-in-out;
-}
-
-/* Texto descritivo que surge */
-.info-escondida p {
-    color: #aac6ff;              /* Azul claro com ótimo contraste */
-    font-family: 'Segoe UI', sans-serif;
-    font-size: 1.2vw;
-    line-height: 1.6;
-    margin: 0;
+.card-horario .info {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.4s ease-in-out;
+    width: 92%;
     text-align: center;
 }
 
-/* INTERAÇÕES NO CARD AO PASSAR O MOUSE */
-.card-curso:hover .info-escondida {
-    opacity: 1;                  /* Exibe a descrição do curso */
+.card-horario .sub-card {
+    color: #00ecff;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 0.95vw;
+    font-weight: bold;
+    margin-bottom: 1.5vh;
 }
 
-.card-curso:hover img {
-    filter: blur(2px);            /* Borra levemente a imagem ao fundo */
+.card-horario:hover {
+    border-color: #00ecff;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 236, 255, 0.15);
+}
+
+.card-horario:hover .info {
+    max-height: 500px;
+    opacity: 1;
+    margin-top: 2vh;
+}
+
+.tabela-responsiva {
+    overflow-x: auto;
+    width: 100%;
+    margin-top: 1vh;
+    border-radius: 0.4vw;
+}
+
+.grade-horaria {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 0.8vw;
+    background-color: rgba(255, 255, 255, 0.03);
+}
+
+.grade-horaria th, 
+.grade-horaria td {
+    border: 1px solid rgba(48, 50, 161, 0.6);
+    padding: 0.8vh 0.5vw;
+    color: white;
+    text-align: center;
+}
+
+.grade-horaria th {
+    background-color: #3032a1;
+    color: #00ecff;
+    font-weight: bold;
+}
+
+.grade-horaria td .sala {
+    display: block;
+    font-size: 0.65vw;
+    color: #aac6ff;
+}
+
+.divisor-turno td {
+    background-color: rgba(48, 50, 161, 0.3);
+    color: #aac6ff;
+    font-weight: bold;
+    font-size: 0.75vw;
+    padding: 0.4vh;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 800px) {
+    .grid-horarios { max-width: 95vw; }
+    .card-horario h3 { font-size: 18px; }
+    .card-horario .sub-card { font-size: 13px; }
+    .grade-horaria { font-size: 11px; }
+    .grade-horaria td .sala { font-size: 9px; }
+    .divisor-turno td { font-size: 11px; }
 }

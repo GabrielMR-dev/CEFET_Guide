@@ -1,122 +1,132 @@
 .Inicio-Horarios h1 {
     color: white;
-    font-size: 4vw;
+    font-size: 3.5vw;
     margin-bottom: 2vh;
-    font-family: Cambria, Georgia, serif;
+    font-family: 'Gill Sans', sans-serif;
 }
 
 .Inicio-Horarios p {
-    color: #aac6ff;
-    font-family: 'Gill Sans', sans-serif;
+    color: #ffffff;
+    font-family: 'Segoe UI', sans-serif;
     font-size: 1.3vw;
-    margin-bottom: 8vh;
+    margin-bottom: 5vh;
+    opacity: 0.9;
+}
+
+.grid-horarios {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5vw;
+    width: 100%;
+    max-width: 75vw;
+    margin: 0 auto 10vh auto;
 }
 
 .card-horario {
-    background-color: rgb(170, 198, 255);
-    border: 0.2vw solid #3032a1;
-    border-radius: 1vw;
-    padding: 1.5vw;
-    height: 320px;
-    box-shadow: 0 4px 15px rgba(0, 16, 135, 0.4);
-    box-sizing: border-box;
+    background-color: rgb(13, 13, 52);
+    border: 0.15vw solid #3032a1;
+    border-radius: 0.8vw;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    position: relative;
-    overflow: hidden;
-    transition: transform ease-in-out 0.2s;
-}
-
-.card-horario:hover {
-    transform: scale(1.03);
+    padding-bottom: 2vh;
 }
 
 .card-horario img {
     width: 100%;
     height: 180px;
     object-fit: cover;
-    border-radius: 0.5vw;
-    margin-bottom: 15px;
-    transition: filter 0.3s ease;
+    border-bottom: 0.15vw solid #3032a1;
 }
 
 .card-horario h3 {
-    margin: 0;
-    color: #0d0d34;
+    color: white;
     font-family: 'Gill Sans', sans-serif;
     font-size: 1.6vw;
-    font-weight: bold;
+    margin: 2vh 0 1vh 0;
 }
 
-.info {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(13, 13, 52, 0.95);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1.5vw;
-    box-sizing: border-box;
+.card-horario .info {
+    max-height: 0;
     opacity: 0;
-    transition: opacity 0.3s ease-in-out;
+    overflow: hidden;
+    transition: all 0.4s ease-in-out;
+    width: 92%;
+    text-align: center;
 }
 
-.tabela-horario {
-    width: 100%;
-    border-collapse: collapse;
+.card-horario .sub-card {
+    color: #00ecff;
     font-family: 'Segoe UI', sans-serif;
-    font-size: 1.1vw;
-}
-
-.tabela-horario th {
-    background-color: #3032a1;
-    color: white;
-    padding: 0.6vh 0.4vw;
+    font-size: 0.95vw;
     font-weight: bold;
-    border-bottom: 0.15vw solid #aac6ff;
-    text-transform: uppercase;
-    font-size: 0.9vw;
+    margin-bottom: 1.5vh;
 }
 
-.tabela-horario td {
-    padding: 0.8vh 0.4vw;
-    color: #ffffff;
-    border-bottom: 1px solid rgba(170, 198, 255, 0.15);
-}
-
-.tabela-horario tbody tr:nth-child(even) {
-    background-color: rgba(255, 255, 255, 0.05);
-}
-
-.tabela-horario th:first-child, .tabela-horario td:first-child {
-    text-align: left;
-}
-
-.tabela-horario th:last-child, .tabela-horario td:last-child {
-    text-align: right;
-    color: #aac6ff;
+.card-horario:hover {
+    border-color: #00ecff;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 236, 255, 0.15);
 }
 
 .card-horario:hover .info {
+    max-height: 500px;
     opacity: 1;
+    margin-top: 2vh;
 }
 
-.card-horario:hover img {
-    filter: blur(2px);
+.tabela-responsiva {
+    overflow-x: auto;
+    width: 100%;
+    margin-top: 1vh;
+    border-radius: 0.4vw;
 }
 
-@media (max-width: 1024px) {
-    .tabela-horario { font-size: 13px; }
-    .tabela-horario th { font-size: 11px; }
+.grade-horaria {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 0.8vw;
+    background-color: rgba(255, 255, 255, 0.03);
 }
-@media (max-width: 900px) {
-    .grid-horarios { grid-template-columns: repeat(2, 1fr); }
+
+.grade-horaria th, 
+.grade-horaria td {
+    border: 1px solid rgba(48, 50, 161, 0.6);
+    padding: 0.8vh 0.5vw;
+    color: white;
+    text-align: center;
 }
-@media (max-width: 600px) {
-    .grid-horarios { grid-template-columns: 1fr; }
+
+.grade-horaria th {
+    background-color: #3032a1;
+    color: #00ecff;
+    font-weight: bold;
+}
+
+.grade-horaria td .sala {
+    display: block;
+    font-size: 0.65vw;
+    color: #aac6ff;
+}
+
+.divisor-turno td {
+    background-color: rgba(48, 50, 161, 0.3);
+    color: #aac6ff;
+    font-weight: bold;
+    font-size: 0.75vw;
+    padding: 0.4vh;
+}
+
+@media (max-width: 800px) {
+    .grid-horarios { max-width: 95vw; }
+    .card-horario h3 { font-size: 18px; }
+    .card-horario .sub-card { font-size: 13px; }
+    .grade-horaria { font-size: 11px; }
+    .grade-horaria td .sala { font-size: 9px; }
+    .divisor-turno td { font-size: 11px; }
 }
